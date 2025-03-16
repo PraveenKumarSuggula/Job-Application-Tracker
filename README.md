@@ -38,59 +38,92 @@ Ensure you have the following installed on your local machine:
 - **Git**
 
 ### 🔥 Installation & Setup
-1. **Fork this repository**
-   - Click the **Fork** button at the top-right of this repository on GitHub.
-2. **Clone the forked repository**
-   ```sh
-   git clone https://github.com/YOUR_GITHUB_USERNAME/job-application-tracker.git
-   ```
-3. **Navigate to the project directory**
-   ```sh
-   cd job-application-tracker
-   ```
-4. **Install dependencies**
-   ```sh
-   npm install
-   ```
-   _or_
-   ```sh
-   yarn install
-   ```
-5. **Start the development server**
-   ```sh
-   npm start
-   ```
-   _or_
-   ```sh
-   yarn start
-   ```
-6. **Open in browser**
-   - Navigate to `http://localhost:3000/`
+```sh
+# Fork this repository
+# Click the Fork button at the top-right of this repository on GitHub.
+
+# Clone the forked repository
+git clone https://github.com/YOUR_GITHUB_USERNAME/job-application-tracker.git
+
+# Navigate to the project directory
+cd job-application-tracker
+
+# Install dependencies
+npm install
+# or
+yarn install
+
+# Start the development server
+npm start
+# or
+yarn start
+
+# Open in browser
+# Navigate to http://localhost:3000/
+```
+
+## 🔧 **Enable Google Sheets API & Google Drive API**
+To integrate Google Sheets for storing job applications, follow these steps:
+
+### **Step 1: Enable APIs in Google Cloud Console**
+```sh
+# Go to Google Cloud Console
+# Select or create a new project
+# Enable Google Sheets API and Google Drive API
+```
+
+### **Step 2: Create a Service Account**
+```sh
+# Navigate to IAM & Admin > Service Accounts
+# Click "Create Service Account"
+# Enter a name (e.g., job-tracker-service)
+# Click "Create & Continue"
+# Grant the "Editor" role
+# Click "Done"
+```
+
+### **Step 3: Generate Service Account Credentials**
+```sh
+# In the Service Accounts list, select the newly created service account
+# Go to the "Keys" tab
+# Click "Add Key" > "Create new key"
+# Select JSON format and click "Create"
+# A credentials.json file will be downloaded - keep it safe!
+```
+
+### **Step 4: Share Google Sheets Access with Service Account**
+```sh
+# Open your Google Sheet
+# Click "Share" (top-right corner)
+# Copy the email address of your service account
+# Paste it in the "Add people and groups" field
+# Set the role to "Editor"
+# Click "Send"
+```
 
 ## 🛠 How to Contribute
-1. **Create a new feature branch**
-   ```sh
-   git checkout -b feature/your-feature-name
-   ```
-2. **Make your changes and commit**
-   ```sh
-   git add .
-   git commit -m "Added new feature: your-feature-name"
-   ```
-3. **Push to your forked repository**
-   ```sh
-   git push origin feature/your-feature-name
-   ```
-4. **Create a Pull Request**
-   - Open a **Pull Request** from your forked repository to the main repository.
+```sh
+# Create a new feature branch
+git checkout -b feature/your-feature-name
+
+# Make your changes and commit
+git add .
+git commit -m "Added new feature: your-feature-name"
+
+# Push to your forked repository
+git push origin feature/your-feature-name
+
+# Create a Pull Request
+# Open a Pull Request from your forked repository to the main repository.
+```
 
 ## 📜 License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 📞 Contact
 For any questions or suggestions, feel free to reach out!
-praveenkumar.suggula0@gmail.com
-https://www.linkedin.com/in/praveensuggula/
+praveenkumar.suggula0@gmail.com  
+[LinkedIn](https://www.linkedin.com/in/praveensuggula/)
 
 ---
 _Enjoy tracking your job applications! 🚀_
