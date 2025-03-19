@@ -279,10 +279,10 @@ const JobTable = () => {
               <Table aria-label="job applications">
                 <TableHead>
                   <TableRow className="table-header">
-                    <TableCell sx={{ minWidth: 200 }} className="table-th">
+                    <TableCell sx={{ minWidth: 150 }} className="table-th">
                       Company
                     </TableCell>
-                    <TableCell sx={{ minWidth: 150 }} className="table-th">
+                    <TableCell sx={{ minWidth: 100 }} className="table-th">
                       Job Details
                     </TableCell>
                     <TableCell sx={{ minWidth: 100 }} className="table-th">
@@ -292,7 +292,7 @@ const JobTable = () => {
                     <TableCell sx={{ minWidth: 100 }} className="table-th">
                       Resume Used
                     </TableCell>
-                    <TableCell sx={{ minWidth: 50 }} className="table-th">
+                    <TableCell sx={{ minWidth: 40 }} className="table-th">
                       Last Updated
                     </TableCell>
                     <TableCell className="table-th">Actions</TableCell>
@@ -303,6 +303,10 @@ const JobTable = () => {
                     <TableRow key={row.id}>
                       {/* Company */}
                       <TableCell
+                        sx={{
+                          whiteSpace: "normal",
+                          wordBreak: "break-word",
+                        }}
                         onClick={() => {
                           setEditingCell({ id: row.id, field: "company" });
                           setTempValue(row.company);
@@ -328,6 +332,10 @@ const JobTable = () => {
 
                       {/* Job Details */}
                       <TableCell
+                        sx={{
+                          whiteSpace: "normal",
+                          wordBreak: "break-word",
+                        }}
                         onClick={() => {
                           setEditingCell({ id: row.id, field: "joblink" });
                           setTempValue(row.joblink || "");
@@ -587,15 +595,13 @@ const JobTable = () => {
 
                       {/* Actions */}
                       <TableCell>
-                       
-
                         <Tooltip title="Delete Job Entry">
-                        <IconButton
-                          color="error"
-                          onClick={() => handleOpenRowDialog(row.id)}
-                        >
-                          <DeleteIcon />
-                        </IconButton>
+                          <IconButton
+                            color="error"
+                            onClick={() => handleOpenRowDialog(row.id)}
+                          >
+                            <DeleteIcon />
+                          </IconButton>
                         </Tooltip>
                       </TableCell>
 
