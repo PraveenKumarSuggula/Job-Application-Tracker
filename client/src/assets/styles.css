@@ -1,0 +1,140 @@
+/* ===================================
+   Global Styling
+=================================== */
+:root {
+    --primary-color: #ff9800;
+    --primary-hover: #0056b3;
+    --success-color: #28a745;
+    --danger-color: red;
+    --background-light: #f8f9fa;
+    --border-color: #ddd;
+    --text-color: #333;
+    --header-bg: #ff9800;
+    --header-text: #ffffff;
+}
+
+/* ===================================
+   Table Styling
+=================================== */
+.table-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.custom-textbox .MuiOutlinedInput-root {
+    border-radius: 8px;
+    background-color: white;
+}
+
+.custom-textbox .MuiOutlinedInput-root.Mui-focused fieldset {
+    border-color: var(--primary-color);
+    border-width: 2px;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* === Table Header === */
+.responsive-table th {
+    background-color: var(--header-bg); 
+    color: var(--header-text);
+    font-weight: bold;
+    font-size: 24px;
+    padding: 14px;
+    text-align: center;
+    white-space: nowrap;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+/* === Table Cells === */
+.responsive-table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+/* === Zebra Striping for Rows === */
+.responsive-table tr:nth-child(even) {
+    background-color: var(--background-light);
+}
+
+/* ===================================
+   Icon Buttons (For Actions)
+=================================== */
+.delete-btn {
+    color: var(--danger-color);
+    transition: 0.3s;
+}
+
+.delete-btn:hover {
+    color: red;
+}
+
+.table-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    font-weight: bold;
+    font-size: 16px;
+    padding: 14px;
+    text-align: center;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.table-th {
+    color: white !important;
+    font-weight: bold;
+}
+
+/* ===================================
+   Responsive Design (Mobile, Tablet, Desktop)
+=================================== */
+
+/* Mobile (≤ 768px): Scrollable Table & Smaller Elements */
+@media (max-width: 768px) {
+    .table-container {
+        overflow-x: auto;
+    }
+
+    .responsive-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .responsive-table th, .responsive-table td {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/* Tablet (769px - 1024px): Slightly Larger Elements */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .table-container {
+        padding: 15px;
+    }
+
+    .responsive-table th, .responsive-table td {
+        font-size: 16px;
+        padding: 12px;
+    }
+}
+
+/* Desktop (≥ 1025px): Default Layout */
+@media (min-width: 1025px) {
+    .table-container {
+        padding: 20px;
+    }
+
+    .responsive-table th, .responsive-table td {
+        font-size: 18px;
+        padding: 14px;
+    }
+}
