@@ -12,6 +12,87 @@
     --header-bg: #ff9800;
     --header-text: #ffffff;
 }
+/* ===================================
+   CSV Import/Export Button Styling
+=================================== */
+.csv-container {
+    display: flex;
+    justify-content: space-between;  /* Align buttons to both ends */
+    align-items: center;
+    width: 100%;
+    max-width: 800px; /* Adjust width */
+    margin: 20px auto;
+    padding: 10px;
+}
+
+/* Upload & Download Buttons */
+.csv-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;  /* Set width */
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Upload CSV (Left) */
+.csv-upload {
+    background-color: #a2a5a9 !important;
+    color: white;
+}
+
+.csv-upload:hover {
+    background-color: #a2a5a9 !important;
+}
+
+/* Download CSV (Right) */
+.csv-download {
+    background-color: #a2a5a9 !important;
+    color: white;
+}
+
+.csv-download:hover {
+    background-color: #a2a5a9 !important;
+}
+
+/* Fix File Input Display */
+.csv-upload input {
+    display: none;
+}
+
+/* ===================================
+   Responsive Fix for Mobile
+=================================== */
+@media (max-width: 768px) {
+    .csv-container {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .csv-upload,
+    .csv-download {
+        width: 45%;  /* Make them fit in smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .csv-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .csv-upload,
+    .csv-download {
+        width: 100%;
+    }
+}
 
 /* ===================================
    Table Styling

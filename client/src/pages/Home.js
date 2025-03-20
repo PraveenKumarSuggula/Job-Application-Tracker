@@ -5,6 +5,7 @@ import { Button, Container, Typography } from '@mui/material';
 import { signOut } from 'firebase/auth';
 import { auth } from '../config/firebase';
 import JobTable from '../components/JobTable';
+import CsvHandler from '../components/CsvHandler';
 
 const Home = () => (
   <Container maxWidth="lg" sx={{ my: 4 }}>
@@ -14,6 +15,7 @@ const Home = () => (
 
     <JobForm />
 
+    <CsvHandler />
     <Typography variant="h6" sx={{ mt: 6, mb: 2 }}>Your Job Applications:</Typography>
     <JobTable />
   </Container>

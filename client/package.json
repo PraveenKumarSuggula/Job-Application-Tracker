@@ -19,6 +19,7 @@
     "dayjs": "^1.11.13",
     "file-saver": "^2.0.5",
     "firebase": "^11.4.0",
+    "papaparse": "^5.5.2",
     "react": "^19.0.0",
     "react-datepicker": "^8.2.1",
     "react-dom": "^19.0.0",
